@@ -1,0 +1,57 @@
+								Linux Notes
+#sudo apt-get update --> Use to update the packages.
+#sudo apt-get upgrade --> use to install those updated packages.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+#cat /etc/passwd
+#cat /etc/shadow
+#cat /etc/group
+#cat /etc/gshadow
+
+#groupadd -g 1023 "group_name"                  --> GID specified by you 
+#groupadd -o -g 1023 "group_name"               --> Group with existing GID
+#groupmod -n "new_group_name" "old_group_name"
+#groupmod -g 545 developer                      --> Modify GID of developer group
+#groupdel developer
+
+#useradd -d "home_dir" samanvay
+#useradd -g "group_name" samanvay
+#useradd -G developer,testor,devops samanvay    --> Add to multiple groups
+#useradd -N samanvay                            --> No group only username
+#useradd -m "home_dir" samanvay                 --> Creates a home dir if it doesn't exists
+#useradd -M samanvay                            --> Without Home dir
+#useradd -s "shell_name" samanvay               --> specified default shell(Ex./bin/zsh)
+#useradd -s /sbin/nologin samanvay              --> No login shell
+#useradd -u 1026 samanvay                       --> user_id
+#useradd -e 2014-03-27 samanvay                 --> Expiry date account
+#useradd -c "Developer" samanvay                --> custom comments inside double quote" "
+
+
+#usermod -c "adding_comments" samanvay
+#usermod -d "new_home_dir" samanvay
+#usermod -e 2014-03-27 samanvay
+#usermod -g "new_primary_group" samanvay	  --> change primary group	
+#usermod -a -G "group_name" samanvay		  --> Assign new group to user
+#usermod -l new_samanvay samanvay		  --> user login name change
+#usermod -L samanvay			          --> Lock that user."!" in /etc/shadow
+#usermod -U samanvay                            -->  UNlock
+#usermod -d /var/pinky -m pinky                 --> Change home dir location
+#usermod -s /bin/sh samanvay                    --> shell change 
+#usermod -u 888 samanvay                        --> UID change
+
+
+#groups samanvay                                --> see groups of samanvay
+#passwd samanvay                                --> set password for user
+#chage -l samanvay                              --> To see info. of user like password change,account expiry etc.
+#id samanvay                                    --> all groups assigned info with GID for user
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
